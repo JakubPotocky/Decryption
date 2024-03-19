@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Decryption.Views.DecryptionView"
+             xmlns:views="clr-namespace:Decryption.ViewModels"
+             x:DataType="views:MainWindowViewModel"
+             >
+<TabControl Margin="5">
+  <TabItem Header="Atbash Cipher">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Margin="5" FontSize="28">Atbash</TextBlock>
+      <TextBox Text="{Binding AtbashInput}"/>
+      <StackPanel Orientation="Horizontal">
+        <Button Content="Code" Command="{Binding AtbashCode}"/>
+        <Button Content="Decode xd" Command="{Binding AtbashDecode}"/>
+      </StackPanel>
+        <TextBlock Margin="5" Text="{Binding AtbashOutput}"/>
+
+    </StackPanel>
+  </TabItem>
+
+  <TabItem Header="Caesar Cipher">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+      <TextBlock Margin="5" FontSize="28">Ceasar</TextBlock>
+      <TextBox Text="{Binding CeasarInput}"/>
+      <StackPanel Orientation="Horizontal">
+        <Button Content="Code" Command="{Binding CeasarCode}"/>
+        <Button Content="Decode" Command="{Binding CeasarDecode}"/>
+      </StackPanel>
+        <TextBlock Margin="5" Text="{Binding CeasarOutput}"/>
+
+    </StackPanel>
+  </TabItem>
+
+  <TabItem Header="Playfair Cipher">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Margin="5" FontSize="28">Playfair</TextBlock>
+      <TextBox Text="{Binding PlayfairInput}"/>
+      <StackPanel Orientation="Horizontal">
+        <Button Content="Code" Command="{Binding PlayfairCode}"/>
+        <Button Content="Decode" Command="{Binding PlayfairDecode}"/>
+      </StackPanel>
+        <TextBlock Margin="5" Text="{Binding PlayfairOutput}"/>
+    
+    </StackPanel>
+  </TabItem>
+
+  <TabItem Header="Double Transposition Cipher">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Margin="5"> I will do this one later </TextBlock>
+      <Button Content=":)" HorizontalAlignment="Center"/>
+    
+    </StackPanel>
+  </TabItem>
+</TabControl>
+</UserControl>
