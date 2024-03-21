@@ -58,7 +58,8 @@ public class MainWindowViewModel : ViewModelBase
     public void CeasarDecode()
     {
         //call func to pass string and get result
-        CeasarOutput = "Decoded message  -> Ceasar";
+        CeasarOutput = CC.Encode(CeasarInput);
+        CeasarInput = CeasarOutput;
     }
 
     //======================================================================

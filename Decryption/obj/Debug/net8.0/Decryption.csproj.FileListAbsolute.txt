@@ -129,3 +129,4 @@ C:\Users\jakub\Desktop\skola\2semester\advanced object oriented programing\oop7m
 C:\Users\jakub\Desktop\skola\2semester\advanced object oriented programing\oop7month\Decryption\obj\Debug\net8.0\Decryption.csproj.Up2Date
 C:\Users\jakub\Desktop\skola\2semester\advanced object oriented programing\oop7month\Decryption\obj\Debug\net8.0\Decryption.genruntimeconfig.cache
 C:\Users\jakub\Desktop\skola\2semester\advanced object oriented programing\oop7month\Decryption\obj\Debug\net8.0\ref\Decryption.dll
+C:\Users\jakub\Desktop\skola\2semester\advanced object oriented programing\oop7month\Decryption\obj\Debug\net8.0\Decryption.sourcelink.json
