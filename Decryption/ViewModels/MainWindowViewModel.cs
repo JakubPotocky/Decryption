@@ -63,8 +63,14 @@ public class MainWindowViewModel : ViewModelBase
     }
 
     //======================================================================
-    private string _playfairInput = string.Empty;
+    private string _playfairInput = "Enter message you would like to Decode/Encode";
     private string _playfairOutput = string.Empty;
+    private string _playfairMatrix = "Enter decryption keyword.";
+    public string PlayfairMatrix
+    {
+        get => _playfairMatrix;
+        set => this.RaiseAndSetIfChanged(ref _playfairMatrix, value);
+    }
     public string PlayfairInput
     {
         get => _playfairInput;
@@ -75,15 +81,24 @@ public class MainWindowViewModel : ViewModelBase
         get => _playfairOutput;
         set => this.RaiseAndSetIfChanged(ref _playfairOutput, value);
     }
+    
     public void PlayfairCode()
     {
-        //call func to pass string and get result
-        PlayfairOutput = "Coded message -> Playfair";
+        PlayfairCipher PC = new();
+
+        if(PC.CreateMatrix(PlayfairMatrix))
+        PlayfairOutput = PC.Decode(PlayfairInput);
+        else
+        PlayfairOutput = "No good keyword";
     }
     public void PlayfairDecode()
     {
-        //call func to pass string and get result
-        PlayfairOutput = "Decoded message  -> Playfair";
+        PlayfairCipher PC = new();
+        
+        if(PC.CreateMatrix(PlayfairMatrix))
+        PlayfairOutput = PC.Encode(PlayfairInput);
+        else
+        PlayfairOutput = "No good keyword";
     }
 
      //======================================================================

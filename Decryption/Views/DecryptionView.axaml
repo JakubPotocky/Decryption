@@ -38,6 +38,7 @@
   <TabItem Header="Playfair Cipher">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
       <TextBlock Margin="5" FontSize="28">Playfair</TextBlock>
+      <TextBox Text="{Binding PlayfairMatrix}"/>
       <TextBox Text="{Binding PlayfairInput}"/>
       <StackPanel Orientation="Horizontal">
         <Button Content="Code" Command="{Binding PlayfairCode}"/>
