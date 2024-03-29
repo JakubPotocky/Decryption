@@ -71,6 +71,7 @@ namespace Decryption
         public string Decode(string message)
         {
             message = message.ToLower();
+            message = message.Replace(" ","");
             string decodedMessage = "";
             List<char> chars = new();
 
@@ -100,6 +101,7 @@ namespace Decryption
         public string Encode(string message)
         {
             message = message.ToLower();
+            message = message.Replace(" ","");
             string decodedMessage = "";
             List<char> chars = new();
 
@@ -266,6 +268,7 @@ namespace Decryption
 
         public (int, int) FindIndex(char target)
         {
+            if(target == 'j') target = 'i'; //bleeeee, this can't be like this -> every J will be I from now on lol, if there is J in keyword then it should be different, maybe add private bool which checks if the keyword uses J or make a list and add every index of char in message which will include J
             for (int i = 0; i < PlayfairMatrix.GetLength(0); i++) //i = column
             {
                 for (int j = 0; j < PlayfairMatrix.GetLength(1); j++) //j = row
