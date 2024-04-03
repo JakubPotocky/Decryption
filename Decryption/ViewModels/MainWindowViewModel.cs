@@ -86,7 +86,7 @@ public class MainWindowViewModel : ViewModelBase
     {
         PlayfairCipher PC = new();
 
-        if(PC.CreateMatrix(PlayfairMatrix))
+        if(PC.CreateMatrix(PlayfairMatrix) && PlayfairInput != null)
         PlayfairOutput = PC.Decode(PlayfairInput);
         else
         PlayfairOutput = "No good keyword";
